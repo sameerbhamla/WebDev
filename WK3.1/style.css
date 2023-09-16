@@ -1,0 +1,21 @@
+h1{
+    font-size: 3.5em;
+    line-height: 0em;
+    font-family: arial,helvetica,sans-serif;
+    letter-spacing: 0.1em;
+
+}
+h2{
+    font-family: arial,helvetica,sans-serif;
+    letter-spacing: 0.1em;
+}
+blockquote{
+    color: hsl(30,85%,45%);
+    font-size: 1.5em;
+}
+footer{
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    background-color: hsl(30,85%,45%);
+}
