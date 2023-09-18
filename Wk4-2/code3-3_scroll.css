@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/*
+
+   Author: Sameer Bhamla
+   Date:   9/18
+   
+   Filename: code3-3_scroll.css
+
+*/
+
+#container{
+   width: 900px;
+    height: 370px;
+    margin: 10px auto; /* Center horizontally with 10px top/bottom margin and auto left/right margin */
+    position: relative; /* Relative positioning */
+    top: 30px;
+    left: 0;
+    border: 2px solid brown; /* 2px solid brown outline */
+    overflow: auto; /* Display scrollbars for overflow content */
+}
+
+div {
+   width: 300px;
+   height: 330px;
+   position: absolute;
+}
+
+#slide1 {
+   left: 0;
+}
+
+#slide2 {
+   left: 300px;
+}
+
+#slide3 {
+   left: 600px;
+}
+
+/* Continue for the remaining slides, incrementing the left value by 300px */
+#slide4 {
+   left: 900px;
+}
+
+#slide5 {
+   left: 1200px;
+}
+
+#slide6 {
+   left: 1500px;
+}
+
+#slide7 {
+   left: 1800px;
+}
+
+#slide8 {
+   left: 2100px;
+}
+
+#slide9 {
+   left: 2400px;
+}
+
+img {
+   display: block; /* Change the display property to block-level */
+   width: 300px; /* Set the width to 300 pixels */
+   height: 300px; /* Set the height to 300 pixels */
+}
+

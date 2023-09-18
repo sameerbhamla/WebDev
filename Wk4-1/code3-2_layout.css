@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+
+header, footer, aside, article, a {
+   padding: 10px; 
+   outline: 3px dashed gray; 
+}
+
+body{
+   min-width: 640px;
+   max-width: 1024px;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   margin-left: auto;
+   margin-right: auto;
+
+   display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Create a 3-column grid; adjust as needed */
+    grid-template-rows: 50px 30px 1fr 1fr 100px; /* Define the row heights */
+    grid-gap: 15px;/* Add space between grid items */
+    /* You can customize grid-template-rows and other properties as needed */
+}
+
+header {
+   grid-column: 1 / -1; /* Span from the first grid line to the last grid line */
+}
+
+article#intro {
+   grid-column: span 2; /* Span two columns */
+   grid-row: span 2;    /* Span two rows */
+}
+
+article#main {
+   grid-column: span 3; /* Span three columns */
+   grid-row: span 2;   /* Span two rows */
+}
+
+footer {
+   grid-column: span 2; /* Span two columns */
+}
