@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>CSS Practice</title>
+   <style>
+     body {
+       text-align: center;
+     }
+
+     #container {
+       width: 600px;
+       height: 280px;
+       border: 2px solid blue;
+       padding: 5px;
+       background-color: #F0F0F0;
+       margin: 0 auto;
+       overflow: hidden;
+     }
+
+     h2 {
+       font-size: 16pt;
+       font-family: Arial, sans-serif;
+       color: blue;
+       font-style: italic;
+     }
+
+     .verse {
+       width: 200px;
+       padding: 10px;
+       margin-right: 10px;
+       float: left;
+       margin-top: 0;
+     }
+
+     .orange {
+       background-color: orange;
+       width: 200px;
+       padding: 10px;
+       position: absolute;
+       top: 110px;
+       left: 200px;
+     }
+
+     .orange-red {
+       background-color: rgb(255, 80, 0);
+       color: white;
+       width: 200px;
+       padding: 10px;
+       float: right;
+       margin-right: 40px;
+       margin-top: 20px;
+     }
+   </style>
+</head>
+<body>
+  <div id="container">
+    <h2>Yesterday</h2>
+    <div class="verse" style="background-color: yellow;">
+      Yesterday, All those backups seemed a waste of pay. Now my database has gone away. Oh I believe in yesterday.
+    </div>
+    <div class="verse">
+      Suddenly, There's not half the files there used to be, And there's a milestone hanging over me. The system crashed so suddenly. I pushed something wrong, What it was I could not say.
+    </div>
+    <div class="verse" style="background-color: orange;">
+      Now all my data's gone and I long for yesterday-ay-ay-ay.
+    </div>
+    <div class="verse orange-red">
+      Yesterday, The need for back-ups seemed so far away. I knew my data was all here to stay, Now I believe in yesterday.
+    </div>
+  </div>
+</body>
+</html>
