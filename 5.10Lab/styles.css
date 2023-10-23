@@ -29,7 +29,7 @@ header{
 
 }
 
-.summary > div {
+.summary > div > div {
    display: flex;
    justify-content: space-between;
  }
@@ -43,7 +43,7 @@ header{
  .related-content{
    flex-grow: 1;
    flex-basis: 20%;
-   
+
  }
 /* Given CSS rules below */
 body {
