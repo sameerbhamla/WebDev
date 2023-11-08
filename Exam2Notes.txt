@@ -1,0 +1,114 @@
+Cat-5/6/7, Coax Cable, Fiber Optic:
+
+Cat-5/6/7: These are categories of Ethernet cables. Cat-5 supports data rates up to 1000 Mbps (Gigabit Ethernet), Cat-6 up to 10 Gbps, and Cat-7 up to 10 Gbps with improved shielding for reduced interference.
+Coax Cable: Coaxial cable has a central copper conductor surrounded by insulation, a metallic shield, and an outer insulating layer. It's used for TV and internet connections.
+Fiber Optic: Fiber optic cables use thin strands of glass or plastic to transmit data as pulses of light. They offer high bandwidth and are immune to electromagnetic interference.
+Double Parity, Checksum, CRC, Hamming Code:
+
+Double Parity: A form of error-checking that involves two parity bits for error detection and correction.
+Checksum: A value calculated from data to check for errors; it's simple and can detect errors but not correct them.
+CRC (Cyclic Redundancy Check): A more complex and robust error-checking method used in data communication.
+Hamming Code: An error-correcting code used in digital communication for error detection and correction.
+APIs (Application Programming Interfaces):
+
+APIs define how software components should interact. They can be used for communication between different software systems or within the same system.
+Hoisting:
+
+In JavaScript, hoisting is a behavior where variable and function declarations are moved to the top of their containing function or scope during compilation. This means you can use variables and functions before they are declared.
+Destructuring:
+
+Destructuring in JavaScript allows you to extract values from objects and arrays in a concise way, making it easier to work with complex data structures.
+Callback, Promises, Async/Await:
+
+Callback: A function passed as an argument to another function and executed later, often used for asynchronous operations.
+Promises: A way to handle asynchronous operations using a more structured and readable syntax. Promises represent a value that may be available now or in the future.
+Async/Await: Syntax for working with Promises in a more synchronous and readable manner.
+let/var/const:
+
+These are keywords used to declare variables in JavaScript.
+let and const have block-level scope and are preferred over var because they limit the variable's scope.
+const is used for values that should not be reassigned, while let allows reassignment.
+Function Invocation:
+
+This refers to calling a function in your code to execute the instructions within that function.
+Function Expressions, Anonymous Functions:
+
+Function Expressions: Functions defined within an expression, often assigned to a variable.
+Anonymous Functions: Functions without a name; they are typically used as arguments in other functions or as immediate function execution.
+Server/Client:
+
+In networking, a server is a computer or software that provides services or resources to other computers or clients. Clients are devices or software that request and consume those services.
+CDN (Content Delivery Network):
+
+A network of distributed servers that deliver web content to users based on their geographic location, improving the speed and reliability of content delivery.
+VPN (Virtual Private Network):
+
+VPNs create secure and encrypted connections over public networks to ensure data privacy and security, often used for remote access or bypassing geolocation restrictions.
+SMTP (Simple Mail Transfer Protocol):
+
+SMTP is a protocol used for sending email messages over the internet, defining how email clients and servers interact to send and receive messages.
+Router/Modem/Switch/Hub:
+
+Router: Connects different networks and directs traffic between them.
+Modem: Connects to the internet service provider (ISP) and translates digital data for your network.
+Switch: Connects devices within a local network and makes data forwarding decisions.
+Hub: An older device that broadcasts data to all connected devices without making intelligent decisions.
+Closure:
+
+In JavaScript, a closure is a function that captures and retains references to variables from its outer (enclosing) scope, even after that scope has finished executing.
+CSMA (Carrier Sense Multiple Access):
+
+A network protocol that listens to the network before transmitting data to avoid collisions, commonly used in Ethernet.
+OSPF (Open Shortest Path First):
+
+A routing protocol used in IP networks to calculate the best path for data packets, based on the link-state routing algorithm.
+ARQ (Automatic Repeat reQuest):
+
+A method used in data transmission to detect and request retransmission of lost or corrupted data, ensuring data integrity.
+ARP (Address Resolution Protocol):
+
+ARP is used to map an IP address to a physical MAC address on a local network, allowing devices to communicate at the data link layer.
+MAC (Media Access Control):
+
+MAC addresses are unique identifiers assigned to network interfaces (e.g., network cards). They are essential for local network communication.
+Distance Vector Routing and Bellman-Ford:
+
+Distance Vector Routing: A routing algorithm that calculates the best path for data packets based on the number of hops (distance) to the destination.
+Bellman-Ford: An example of a distance vector routing algorithm used in networking.
+DHCP (Dynamic Host Configuration Protocol):
+
+DHCP is a network protocol that dynamically assigns IP addresses to devices on a network, simplifying network management.
+UDP/TCP:
+
+UDP (User Datagram Protocol): A connectionless, lightweight protocol for data transmission, commonly used for real-time applications.
+TCP (Transmission Control Protocol): A connection-oriented protocol that ensures reliable data delivery through acknowledgment and retransmission mechanisms.
+ICMP (Internet Control Message Protocol):
+
+ICMP is used for sending error messages and operational information about network conditions, often used for troubleshooting network issues.
+Wireshark:
+
+Wireshark is a network protocol analyzer that allows users to capture and analyze network traffic, helping with network troubleshooting and security analysis.
+DNS Queries:
+
+DNS queries involve translating human-readable domain names into IP addresses, allowing users to access websites and other resources.
+Node: npm/fs/express/sockets/http/https/req/res:
+
+These are modules and components related to Node.js, a JavaScript runtime for server-side applications. npm is the package manager, fs is the file system module, express is a web framework, and the others relate to network communication and HTTP/HTTPS handling.
+Stateless/Connectionless:
+
+Stateless and connectionless are terms used to describe network protocols where each request or message is independent and not tied to previous interactions.
+RPC (Remote Procedure Call):
+
+RPC is a protocol that allows a program to request a service from a server in another computer, making it appear as if the program is making a local procedure call.
+Restful:
+
+Representational State Transfer (REST) is an architectural style for designing networked applications based on principles of simplicity, statelessness, and resource-based communication.
+Smurf Attack:
+
+A Smurf attack is a type of Distributed Denial of Service (DDoS) attack that floods a network with a large volume of ICMP packets, often using spoofed source addresses to amplify the attack.
+SSH (Secure Shell):
+
+SSH is a cryptographic network protocol used for secure remote access to systems and secure file transfers, providing encryption and authentication.
+Special/Regular Relay:
+
+The meaning of "Special" and "Regular Relay" in a networking context is not standard. Additional context is needed to provide a more specific explanation.
