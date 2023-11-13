@@ -1,91 +1,56 @@
-function ConvertCtoF(degreesCelsius) {
-   var result = degreesCelsius * 9/5 + 32;
-   return result;
-   // Your code here
+
+function convertCtoF(celsius) {
+   return celsius * 9/5 + 32;
 }
 
-function ConvertFtoC(degreesFahrenheit) {
-   var far = (degreesFahrenheit - 32) * 5/9;
-   return far;
-   // Your code here
+function convertFtoC(fahrenheit) {
+   return (fahrenheit - 32) * 5/9;
 }
 
-function bodyLoaded() {
+function updateImage(fahrenheit) {
+   const weatherImage = document.getElementById('weatherImage');
 
-   // This function controls the click event of convert button.
-   
-   var empty = "";
-   document.getElementById("ConvertButton").addEventListener("click", function () {
-   
-   var fahr = document.getElementById("FInput").value;
-   var cel= document.getElementById("CInput").value;
-
-   if (cel == empty && fahr == empty) {
-       document.getElementById("ErrDiv").innerHTML = "Field cannot be empty.";
-       document.getElementById("ErrDiv").style = "color:orange";
+   if (fahrenheit < 32) {
+       weatherImage.src = 'cold.png';
+   } else if (fahrenheit >= 32 && fahrenheit <= 50) {
+       weatherImage.src = 'cool.png';
+   } else {
+       weatherImage.src = 'warm.png';
    }
-
-   else {
-       
-
-       if (cel == empty) { 
-           if (isNaN(fahr)) {
-               document.getElementById("ErrDiv").innerHTML = fahr + " is not a number";
-               document.getElementById("ErrDiv").style = "color:red";
-       }
-           else {
-
-               document.getElementById("ErrDiv").innerHTML = empty;
-               document.getElementById("CInput").value = ConvertFtoC(parseFloat(fahr));
-
-           }
-
-       }
-
-       else {
-           if (isNaN(cel)) {
-               document.getElementById("ErrDiv").innerHTML = cel + " is not a number";
-               document.getElementById("ErrDiv").style = "color:red";
-           }
-
-       else {
-
-               fahr = ConvertCtoF(parseFloat(cel));
-               document.getElementById("ErrDiv").innerHTML = empty;
-               document.getElementById("FInput").value = fahr;
-
-           }
-
-       }
-       if (fahr < 32) {
-           document.getElementById("WeatherImage").src = "cold.gif";
-       }
-
-       else if (fahr >= 32 && fahr <= 50) {
-           document.getElementById("WeatherImage").src = "cool.gif";
-       }
-
-       else if (fahr > 50) {
-           document.getElementById("WeatherImage").src = "warm.gif";
-
-       }
-
-   }
-
-});
-   document.getElementById("FInput").addEventListener("input", clearCel);
-function clearCel() {
-   document.getElementById("CInput").value = empty;
 }
 
-document.getElementById("CInput").addEventListener("input", clearFahr);
+function domLoaded() {
+   const cInput = document.getElementById('cInput');
+   const fInput = document.getElementById('fInput');
+   const convertButton = document.getElementById('convertButton');
+   const errorMessage = document.getElementById('errorMessage');
 
-function clearFahr() {
-   document.getElementById("FInput").value = empty;
+   cInput.addEventListener('input', function() {
+       fInput.value = '';
+       errorMessage.innerHTML = '';
+   });
+
+   fInput.addEventListener('input', function() {
+       cInput.value = '';
+       errorMessage.innerHTML = '';
+   });
+
+   convertButton.addEventListener('click', function() {
+       let celsius = parseFloat(cInput.value);
+       let fahrenheit = parseFloat(fInput.value);
+
+       if (!isNaN(celsius)) {
+           fInput.value = convertCtoF(celsius);
+           updateImage(parseFloat(fInput.value));
+           errorMessage.innerHTML = '';
+       } else if (!isNaN(fahrenheit)) {
+           cInput.value = convertFtoC(fahrenheit);
+           updateImage(fahrenheit);
+           errorMessage.innerHTML = '';
+       } else {
+           errorMessage.innerHTML = 'Input is not a number';
+       }
+   });
 }
 
-   // Your code here
-}
-window.onload = function(){
-   document.body.addEventListener('onload', bodyLoaded());
-}
+document.addEventListener('DOMContentLoaded', domLoaded);
