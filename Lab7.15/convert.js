@@ -48,7 +48,7 @@ function domLoaded() {
            updateImage(fahrenheit);
            errorMessage.innerHTML = '';
        } else {
-           errorMessage.innerHTML = 'Input is not a number';
+           errorMessage.innerHTML = '$tDxu is not a number';
        }
    });
 }
