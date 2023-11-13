@@ -1,537 +1,76 @@
-function parseScores(scoresString) {
-
- 
-
-    
-
- 
-
-   //Start the String.split() function
-
-
-
-   var inString = scoresString.split(" ");
-
-
-
-   
-
-
-
-   //Return string
-
-
-
-   return inString;
-
-
-
+function parseScores(scoresString) { //parseScores function definition
+   return scoresString.split(' ');
 }
-
-
-
-//Start the function buildDistributionArray()
-
-
-
-function buildDistributionArray(scoresArray) {
-
-
-
-   //Declare a variable x and set its value to 0
-
-
-
-   var x = 0;
-
-
-
-   
-
-
-
-   //Declare a variable distributeArray for array list.
-
-
-
-   var distributeArray = new Array(5);
-
-
-
-   //Set the values.
-
-
-
-   distributeArray[0] = 0;
-
-
-
-   distributeArray[1] = 0;
-
-
-
-   distributeArray[2] = 0;
-
-
-
-   distributeArray[3] = 0;
-
-
-
-   distributeArray[4] = 0;
-
-
-
-   
-
-
-
-   //Start a while loop till array length
-
-
-
-   while (x < scoresArray.length) {
-
-
-
-       
-
-
-
-       //Check if the array length lies between 80 and 89.
-
-
-
-       if (scoresArray[x] >= 80 && scoresArray[x] <=89)
-
-
-
-       
-
-
-
-       {
-
-
-
-           //Increment index '1' value
-
-
-
-           distributeArray[1]++;
-
-
-
+function buildDistributionArray(scoresArray) { //buildDistributionArray function definition
+   A=0, B=0, C=0, D=0, F=0;
+   var i = 0;
+     while(i<scoresArray.length){
+       if(Number(scoresArray[i]>= 90) && Number(scoresArray[i]<= 100)){
+         A = A + 1;
        }
-
-
-
-       
-
-
-
-       //Check if the array length greater than 90.
-
-
-
-       else if (scoresArray[x] >= 90) {
-
-
-
-           //Increment index '0' value    
-
-
-
-           distributeArray[0]++;
-
-
-
+       else if(Number(scoresArray[i] >= 80) && Number(scoresArray[i] < 90)){
+         B = B + 1;
        }
-
-
-
-       //Check if the array length lies between 70 and 79.
-
-
-
-       else if(scoresArray[x] >= 70 && scoresArray[x] <=79) {
-
-
-
-           //Increment index '2' value
-
-
-
-           distributeArray[2]++;
-
-
-
+       else if(Number(scoresArray[i] >= 70) && Number(scoresArray[i] < 80)){
+         C = C + 1;
        }
-
-
-
-       
-
-
-
-       //Check if the array length lies between 60 and 69.
-
-
-
-       else if (scoresArray[x] >= 60 && scoresArray[x] <=69)
-
-
-
-       {
-
-
-
-           //Increment index '3' value
-
-
-
-           distributeArray[3]++;
-
-
-
+       else if(Number(scoresArray[i] >= 60) && Number(scoresArray[i] < 70)){
+         D = D + 1;
        }
-
-
-
-        
-
-
-
-       //Check if the array length lies between 0 and 59.
-
-
-
-       else if (scoresArray[x] <= 59 && scoresArray[x]>0)
-
-
-
-       {
-
-
-
-           //Increment index '2' value
-
-
-
-           distributeArray[4]++;
-
-
-
+       else if(Number(scoresArray[i] >= 1) && Number(scoresArray[i]  < 60)){
+         F = F + 1;
        }
-
-
-
-       
-
-
-
-       //Increment the value of x.
-
-
-
-       x++;
-
-
-
-   }    
-
-
-
-   
-
-
-
-   //Retun distributeArray
-
-
-
-   return distributeArray;
-
-
-
+       i++;
+     }
+     return [A,B,C,D,F];
 }
-
-
-
-//Start the function setTableContent()
-
-
-
-function setTableContent(userInput) {
-
-
-
-   //Declare a variable and paarse the ID 'distributionTable' of HTML file.
-
-
-
-   var myTable = document.getElementById("distributionTable");
-
-
-
-   
-
-
-
-   
-
-
-
-   //Check the userIput length greater than 0.
-
-
-
-   if (userInput.length>0) {
-
-
-
-       //Declare a variable parsedScores and parse the userInput.
-
-
-
-       var parsedScores = parseScores(userInput);
-
-
-
-       
-
-
-
-       //Declare a variable buildArray and parse parsedScores in the function buildDistributionArray();
-
-
-
-       var buildArray = buildDistributionArray(parsedScores);
-
-
-
-   
-
-
-
-       //Declare variable for rows creation in the table and insert row values.
-
-
-
-       var row = myTable.insertRow(0);
-
-
-
-       var row2 = myTable.insertRow(1);
-
-
-
-       var row3 = myTable.insertRow(2);
-
-
-
-       
-
-
-
-       //Declare variables for cell and insert cell data into the rows.
-
-
-
-       var cell1 = row2.insertCell(0);
-
-
-
-       var cell2 = row2.insertCell(1);
-
-
-
-       var cell3 = row2.insertCell(2);
-
-
-
-       var cell4 = row2.insertCell(3);
-
-
-
-       var cell5 = row2.insertCell(4);
-
-
-
-       //Parse cell data in the HTML page.
-
-
-
-       cell1.innerHTML = "A";
-
-
-
-       cell2.innerHTML = "B";
-
-
-
-       cell3.innerHTML = "C";
-
-
-
-       cell4.innerHTML = "D";
-
-
-
-       cell5.innerHTML = "F";
-
-
-
-       //Declare a variable graphValueArray for grapgh values.
-
-
-
-       var graphValueArray = [];
-
-
-
-       
-
-
-
-       //Declare a variable occuranceArray for the occurance of the graph.
-
-
-
-       var occuranceArray = [];
-
-
-
-       //Start a loop for populating graph values with proper styling and occurance values.
-
-
-
-       for (index = 0; index < 5; index++) {        
-
-
-
-           // Display the graph-occurence
-
-
-
-           occuranceArray[index] = row3.insertCell(index);
-
-
-
-           occuranceArray[index].innerHTML = buildArray[index];
-
-
-
-           //Add the corresponding cell value for graph
-
-
-
-           graphValueArray[index] = row.insertCell(index);
-
-
-
-           
-
-
-
-           //Declare a variable styleClass.
-
-
-
-           var styleClass = "bar"+index;
-
-
-
-           
-
-
-
-           //Declare a heightValue for the heigt of the graphs
-
-
-
-           var heightValue = (buildArray[index] * 10) + "px";
-
-
-
-           //Adding DIV element via innerHTML property
-
-
-
-           graphValueArray[index].innerHTML = "<div style='height:"+ heightValue+"' class='"+styleClass+"'></div>";
-
-
-
-       }
-
-
-
+function setTableContent(userInput) { //setTableContent function definition
+   var scores = parseScores(userInput);
+   var arrayGrade = buildDistributionArray(scores);
+   var getTable = document.getElementById('distributionTable');
+   var flag = 0;
+   var i = 0;
+   while(i < arrayGrade.length){
+     if(arrayGrade[i] != 0){
+       flag = 1;
+     }
+     i++;
    }
-
-
-
-   //No graph to be displayed.
-
-
-
-   else{
-
-
-
-   
-
-
-
-       //Inset null in the table.
-
-
-
-       var emptyRow = myTable.insertRow(0);
-
-
-
-       
-
-
-
-       //Display a message
-
-
-
-       emptyRow.innerHTML = "No graph to display";
-
-
-
-   }
-
-
-
-  
-
-
-
+   if(flag == 1){
+     getTable.innerHTML =`
+     <tr>
+       <td><div style='height:0px' class='bar0'></div></td>
+       <td><div style='height:0px' class='bar1'></div></td>
+       <td><div style='height:0px' class='bar2'></div></td>
+       <td><div style='height:0px' class='bar3'></div></td>
+       <td><div style='height:0px' class='bar4'></div></td>
+     </tr>
+       <tr>
+         <td>A</td>
+         <td>B</td>
+         <td>C</td>
+         <td>D</td>
+         <td>F</td>
+       </tr>
+       <tr>
+         <td class="grade"></td>
+         <td class="grade"></td>
+         <td class="grade"></td>
+         <td class="grade"></td>
+         <td class="grade"></td>
+       </tr>`;
+       var j = 0;
+       while(j < arrayGrade.length){
+         var some = document.getElementsByClassName("bar"+j);
+         document.getElementsByClassName("grade")[j].innerHTML = arrayGrade[j]+"";
+         some[0].style.height = (10*arrayGrade[j])+"px";
+         j++;
+       }  
 }
-
-
-
-//Start the function bodyLoaded().
-
-
-
+     else{
+       getTable.innerHTML = "<tr><td>No graph to display</td></tr>"; //Printing No Graph To Display
+     }
+}
 function bodyLoaded() {
-
-
-
-   
-
-
-
-   //setTableContent("45 40 8 8 6 9 0 9");
-
-
-
    setTableContent("45 78 98 83 86 99 90 59");
-
-
-
 }
