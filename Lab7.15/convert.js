@@ -48,7 +48,7 @@ function domLoaded() {
            updateImage(fahrenheit);
            errorMessage.innerHTML = '';
        } else {
-           errorMessage.innerHTML = cInput.value +  ' is not a number';
+           errorMessage.innerHTML = cInput.value + fInput.value + ' is not a number';
        }
    });
 }
