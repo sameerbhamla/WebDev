@@ -6,8 +6,8 @@ Coax Cable: Coaxial cable has a central copper conductor surrounded by insulatio
 and an outer insulating layer. It's used for TV and internet connections.
 Fiber Optic: Fiber optic cables use thin strands of glass or plastic to transmit data as pulses of light. 
 They offer high bandwidth and are immune to electromagnetic interference.
-Double Parity, Checksum, CRC, Hamming Code:
 
+Double Parity, Checksum, CRC, Hamming Code:
 Double Parity: A form of error-checking that involves two parity bits for error detection and correction.
 Checksum: A value calculated from data to check for errors; it's simple and can detect errors but not correct them.
 CRC (Cyclic Redundancy Check): A more complex and robust error-checking method used in data communication.
@@ -150,4 +150,5 @@ SSH is a cryptographic network protocol used for secure remote access to systems
 providing encryption and authentication.
 
 Special/Regular Relay:
-The meaning of "Special" and "Regular Relay" in a networking context is not standard. Additional context is needed to provide a more specific explanation.
+The meaning of "Special" and "Regular Relay" in a networking context is not standard. 
+Additional context is needed to provide a more specific explanation.
