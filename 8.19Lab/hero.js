@@ -59,6 +59,6 @@ function selectionChanged() {
 
 	if (selectedHero instanceof SuperHero && selectedVillain instanceof SuperVillain) {
 		const winnerAlias = selectedHero.battle(selectedVillain) ? selectedHero.alias : selectedVillain.alias;
-		document.querySelector("#winner").innerText = `Winner: ${winnerAlias}`;
+		document.querySelector("#winner").innerText = `Winner: ${winnerAlias}!`;
 	}
 }
